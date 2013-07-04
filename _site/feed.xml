@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ideas</title>
+    <description>Some thoughts and ramblings.</description>
+    <link>blog.rushir.co</link>
+    <atom:link href="blog.rushir.co/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>A Little Less Conversation</title>
+        <description>&lt;p&gt;A little less conversation, a little more action, please&lt;br /&gt;&lt;br /&gt;
+All this aggravation ain&amp;rsquo;t satisfactionin' me&lt;br /&gt;
+A little more bite and a little less bark&lt;br /&gt;
+A little less fight and a little more spark&lt;br /&gt;
+Shut your mouth and open up your heart and baby satisfy me&lt;br /&gt;
+Satisfy me baby&lt;/p&gt;
+
+&lt;p&gt;Baby close your eyes and listen to the music&lt;br /&gt;
+Dig to the summer breeze&lt;br /&gt;
+It&amp;rsquo;s a groovy night and I can show you how to use it&lt;br /&gt;
+Now come along with me and put your mind at ease&lt;/p&gt;
+
+&lt;p&gt;Hey! A little less conversation, a little more action, please&lt;br /&gt;
+All this aggravation ain&amp;rsquo;t satisfactionin' me&lt;br /&gt;
+A little more bite, a little less bark&lt;br /&gt;
+A little less fight and a little more spark&lt;br /&gt;
+Shut your mouth and open up your heart and baby satisfy me&lt;br /&gt;
+Satisfy me baby&lt;/p&gt;
+</description>
+        <pubDate>Sun, 19 May 2013 19:18:29 -0400</pubDate>
+        <link>blog.rushir.co/personal/2013/05/19/a-little-less-conversation/</link>
+        <guid isPermaLink="true">blog.rushir.co/personal/2013/05/19/a-little-less-conversation/</guid>
+      </item>
+    
+      <item>
+        <title>Sore Throat</title>
+        <description>&lt;p&gt;My throat is sore.&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
+
+&lt;p&gt;Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
+
+&lt;p&gt;Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 19 May 2013 17:59:16 -0400</pubDate>
+        <link>blog.rushir.co/personal/2013/05/19/sore-throat/</link>
+        <guid isPermaLink="true">blog.rushir.co/personal/2013/05/19/sore-throat/</guid>
+      </item>
+    
+      <item>
+        <title>Welcome to wardrobe</title>
+        <description>&lt;p&gt;Wardrobe is where I keep all the themes &lt;del&gt;clothes&lt;/del&gt; I coded &lt;del&gt;bought&lt;/del&gt;. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.&lt;/p&gt;
+
+&lt;h1&gt;Making a point&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
+
+&lt;h2&gt;Facts&lt;/h2&gt;
+
+&lt;p&gt;Stuff about Wardrobe.&lt;/p&gt;
+
+&lt;h3&gt;Jekyll features&lt;/h3&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
+
+&lt;h4&gt;Code highlighting&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.&lt;/p&gt;
+
+&lt;h4&gt;Categories&lt;/h4&gt;
+
+&lt;p&gt;Categories appear under the title of each post on post page, and the category index, if you don&amp;rsquo;t want to use it, just don&amp;rsquo;t assign a category to posts.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;To-Dos&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Pagination&lt;/li&gt;
+&lt;li&gt;Syntax highlighting code for each theme&lt;/li&gt;
+&lt;li&gt;Style titles&lt;/li&gt;
+&lt;li&gt;Pretty date&lt;/li&gt;
+&lt;li&gt;Instruction&lt;/li&gt;
+&lt;li&gt;RSS feed&lt;/li&gt;
+&lt;li&gt;Category links&lt;/li&gt;
+&lt;li&gt;Signoff&lt;/li&gt;
+&lt;li&gt;Move things out of includes&lt;/li&gt;
+&lt;li&gt;Style blockquotes&lt;/li&gt;
+&lt;li&gt;Check image and iframe presentations in posts&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;And&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Why am I doing this?&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 May 2013 17:57:45 -0400</pubDate>
+        <link>blog.rushir.co/onboarding/2013/05/18/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">blog.rushir.co/onboarding/2013/05/18/welcome-to-jekyll/</guid>
+      </item>
+    
+      <item>
+        <title>Avalon</title>
+        <description>&lt;p&gt;The Resistance: Avalon pits the forces of Good and Evil in a battle to control the future of civilization. Arthur represents the future of Britain, a promise of prosperity and honor, yet hidden among his brave warriors are Mordred&amp;rsquo;s unscrupulous minions. These forces of evil are few in number but have knowledge of each other and remain hidden from all but one of Arthur&amp;rsquo;s servants. Merlin alone knows the agents of evil, but he must speak of this only in riddles. If his true identity is discovered, all will be lost.&lt;/p&gt;
+
+&lt;p&gt;The Resistance: Avalon is a standalone game, and while The Resistance is not required to play, the games are compatible and can be combined.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Apr 2013 00:00:00 -0400</pubDate>
+        <link>blog.rushir.co/boardgame/2013/04/14/avalon/</link>
+        <guid isPermaLink="true">blog.rushir.co/boardgame/2013/04/14/avalon/</guid>
+      </item>
+    
+      <item>
+        <title>Funny noise</title>
+        <description>&lt;p&gt;Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.&lt;/p&gt;
+
+&lt;p&gt;Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Aenean massa. Cum sociis natoque penatibus.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.&lt;/p&gt;
+
+&lt;p&gt;Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Jun 2012 00:00:00 -0400</pubDate>
+        <link>blog.rushir.co/onboarding/2012/06/11/funny-noise/</link>
+        <guid isPermaLink="true">blog.rushir.co/onboarding/2012/06/11/funny-noise/</guid>
+      </item>
+    
+      <item>
+        <title>Another sunny day</title>
+        <description>&lt;p&gt;Consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, &amp;ldquo;consectetuer&amp;rdquo; adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Jun 2012 00:00:00 -0400</pubDate>
+        <link>blog.rushir.co/onboarding/2012/06/05/another-sunny-day/</link>
+        <guid isPermaLink="true">blog.rushir.co/onboarding/2012/06/05/another-sunny-day/</guid>
+      </item>
+    
+      <item>
+        <title>Do not use default_scope</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 Feb 2012 00:00:00 -0500</pubDate>
+        <link>blog.rushir.co/onboarding/2012/02/15/do-not-use-default-scope/</link>
+        <guid isPermaLink="true">blog.rushir.co/onboarding/2012/02/15/do-not-use-default-scope/</guid>
+      </item>
+    
+  </channel>
+</rss>

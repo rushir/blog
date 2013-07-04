@@ -1,2 +1,1 @@
-blog
-====
+Source of blog.rushir.co

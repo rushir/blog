@@ -1,0 +1,36 @@
+title:            Ideas
+description:      Some thoughts and ramblings.
+url:              blog.rushir.co
+paginate:         10
+
+pygments:         true
+permalink:        pretty
+markdown:         rdiscount
+rdiscount:
+  extensions:     [smart]
+
+# Theme specific settings
+theme:            a
+signoff:          Rushir
+facebook_appid:   
+google_analytics: 
+disqus_shortname: 
+
+owner:
+  name:           Rushir
+  avatar:         'http://www.gravatar.com/avatar/8668efffa9126502a972c56dad843862.png'
+  bio:            'I design, code, and write.'
+
+links: 
+  - name:         Home
+    url:          rushir.co
+  - name:         Categories
+    url:          /categories
+  - name:         About
+    url:          /about
+  - name:         Blog
+    url:          http://muan.co
+  - name:         Email
+    url:          mailto:rushikh@gmail.com
+  - name:         GitHub
+    url:          http://github.com/rushir

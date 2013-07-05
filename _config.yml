@@ -1,5 +1,6 @@
 title:            Ideas
 description:      Some thoughts and ramblings.
+baseurl:   http://rushir.co/blog/
 url:              blog.rushir.co
 paginate:         10
 
@@ -18,7 +19,7 @@ disqus_shortname:
 
 owner:
   name:           Rushir
-  avatar:         'https://secure.gravatar.com/avatar/afd3cc3e385d754183336c859d9e694a?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png'
+  avatar:         'http://2.gravatar.com/avatar/8668efffa9126502a972c56dad843862'
   bio:            'I design, code, and write.'
 
 links: 

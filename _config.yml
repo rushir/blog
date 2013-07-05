@@ -1,37 +1,15 @@
-title:            Ideas
-description:      Some thoughts and ramblings.
-baseurl:   http://rushir.co/blog/
-url:              blog.rushir.co
-paginate:         10
+source: .
+destination: ./public
+exclude: ['CNAME', 'Rakefile', 'README.md', 'public', 'config.ru']
 
-pygments:         true
-permalink:        pretty
-markdown:         rdiscount
-rdiscount:
-  extensions:     [smart]
+relative_permalinks: false
 
-# Theme specific settings
-theme:            a
-signoff:          Rushir
-facebook_appid:   
-google_analytics: 
-disqus_shortname: 
+permalink: pretty
 
-owner:
-  name:           Rushir
-  avatar:         'http://www.gravatar.com/avatar/8668efffa9126502a972c56dad843862.png'
-  bio:            'I design, code, and write.'
+safe: true
+url: http://blog.rushir.co
 
-links: 
-  - name:         Home
-    url:          rushir.co
-  - name:         Categories
-    url:          /categories
-  - name:         About
-    url:          /about
-  - name:         Blog
-    url:          http://muan.co
-  - name:         Email
-    url:          mailto:rushikh@gmail.com
-  - name:         GitHub
-    url:          http://github.com/rushir
+name: Rushir
+description: 'Thoughts on programming, Unix and technology'
+
+markdown: redcarpet

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, Jekyll</title>
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/syntax.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Rushir</a></h1>
+<ul>
+  <li><a href="/blog/">blog</a></li>
+  <li><a href="mailto:rushikh@gmail.com">contact</a></li>
+  <li><a href="https://github.com/rushir/">github</a></li>
+  <li><a href="https://twitter.com/rushikh">twitter</a></li>
+</ul>
+
+    </header>
+    <br />
+    <section>
+      <h1>Hello, Jekyll</h1>
+
+</div>
+  <p>I&#39;m launching this site today. It&#39;s a static site built with <a href="http://jekyllrb.com">Jekyll</a> and the color scheme and choice of fonts has been havily inspired by <a href="https://github.com/orderedlist/minimal">orderedlist&#39;s minimal theme</a>. I&#39;m not going to talk about building a site with Jekyll, because the newly launched <a href="http://jekyllrb.com">official site</a> does an excellent job at that, but I am going to talk about a few problems I had along the way and a few things you can do to improve your Jekyll workflow.</p>
+
+<h2>Use a Rakefile</h2>
+
+<p>It gets boring to type <code>jekyll serve --watch</code> and to create new files named <code>2013-05-24-hello-jekyll.md</code> really fast. A few <code>rake</code> tasks can significantly speed things up. This is what mine looks like:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">task</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:serve</span><span class="o">]</span>
+
+<span class="n">desc</span> <span class="s1">&#39;Build and watch the site&#39;</span>
+<span class="n">task</span> <span class="ss">:build</span> <span class="k">do</span>
+  <span class="nb">system</span> <span class="s1">&#39;jekyll build --watch&#39;</span>
+<span class="k">end</span>
+
+<span class="n">desc</span> <span class="s1">&#39;Serve and watch the site&#39;</span>
+<span class="n">task</span> <span class="ss">:serve</span> <span class="k">do</span>
+  <span class="nb">system</span> <span class="s1">&#39;jekyll serve --watch&#39;</span>
+<span class="k">end</span>
+
+<span class="n">desc</span> <span class="s1">&#39;Create a new post&#39;</span>
+<span class="n">task</span> <span class="ss">:post</span> <span class="k">do</span>
+  <span class="n">date</span> <span class="o">=</span> <span class="no">Time</span><span class="o">.</span><span class="n">new</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="no">STDIN</span><span class="o">.</span><span class="n">gets</span><span class="o">.</span><span class="n">chomp</span>
+  
+  <span class="n">content</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">EOS</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/^ +/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="sh">    ---</span>
+<span class="sh">    layout: post</span>
+<span class="sh">    date: #{date.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;)}</span>
+<span class="sh">    title: #{title}</span>
+<span class="sh">    ---</span>
+<span class="sh">    </span>
+<span class="no">  EOS</span>
+  
+  <span class="n">datef</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-%d&#39;</span><span class="p">)</span>
+  <span class="n">titlef</span> <span class="o">=</span> <span class="n">title</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+  <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;_posts/</span><span class="si">#{</span><span class="n">datef</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="n">titlef</span><span class="si">}</span><span class="s2">.md&quot;</span>
+  
+  <span class="no">File</span><span class="o">.</span><span class="n">write</span> <span class="n">filename</span><span class="p">,</span> <span class="n">content</span>
+<span class="k">end</span>
+</code></pre></div>
+
+<h2>Use rdiscount or redcarpet</h2>
+
+<p>The default markdown parser <code>maruku</code> works fine most of the time but I&#39;ve run into a few problems like getting an <code>REXML could not parse this XML/HTML</code> error when I try to highlight Objective-C code. Switch to <code>rdiscount</code> or <code>redcarpet</code> and the error goes away. Just add <code>markdown: redcarpet</code> to your cofiguration file.</p>
+
+<h2>Pretty Permalinks</h2>
+
+<p>Add <code>permalink: pretty</code> to your configuration file if you want posts to be served from <code>/2013/05/24/hello-jekyll/</code> instead of <code>/2013/05/24/hello-jekyll.html</code>. This also affects pages, so <code>about.html</code> will be available at <code>/about/</code>.</p>
+
+<h2>Using Pow</h2>
+
+<p>If you want to use the <code>rack</code> server <a href="http://pow.cx">pow</a>, build your site into <code>public</code> instead of <code>_site</code>, because <code>pow</code> automatically serves everything in <code>public</code> as static assets.</p>
+
+<h2>An RSS Feed</h2>
+
+<p>You&#39;ll probably want to have an RSS feed for your site, I&#39;ve described how I built one <a href="/2013/05/23/adding-an-rss-feed-to-a-jekyll-site/">in a seperate post</a>.</p>
+
+</div>
+
+    </section>
+    <footer>
+      <p>
+  <small>
+    Copyright &copy; 2013 Rushir -
+    Powered by <a href="http://jekyllrb.com">Jekyll</a> -
+    <a href="/feed.xml" title="Subscribe to Rushir">RSS</a>
+  </small>
+</p>
+
+    </footer>
+  </body>
+</html>

@@ -7,65 +7,12 @@
     <description>Thoughts on programming, Unix and technology</description>
     
       <item>
-        <title>Hello, Jekyll</title>
-        <link>http://blog.rushir.co/2013/05/24/hello-jekyll/</link>
-        <guid isPermaLink="true">http://blog.rushir.co/2013/05/24/hello-jekyll/</guid>
-        <pubDate>Fri, 24 May 2013 10:52:10 +0200</pubDate>
-        <description>&lt;p&gt;I&amp;#39;m launching this site today. It&amp;#39;s a static site built with &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and the color scheme and choice of fonts has been havily inspired by &lt;a href=&quot;https://github.com/orderedlist/minimal&quot;&gt;orderedlist&amp;#39;s minimal theme&lt;/a&gt;. I&amp;#39;m not going to talk about building a site with Jekyll, because the newly launched &lt;a href=&quot;http://jekyllrb.com&quot;&gt;official site&lt;/a&gt; does an excellent job at that, but I am going to talk about a few problems I had along the way and a few things you can do to improve your Jekyll workflow.&lt;/p&gt;
-
-&lt;h2&gt;Use a Rakefile&lt;/h2&gt;
-
-&lt;p&gt;It gets boring to type &lt;code&gt;jekyll serve --watch&lt;/code&gt; and to create new files named &lt;code&gt;2013-05-24-hello-jekyll.md&lt;/code&gt; really fast. A few &lt;code&gt;rake&lt;/code&gt; tasks can significantly speed things up. This is what mine looks like:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:default&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:serve&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Build and watch the site&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:build&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jekyll build --watch&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Serve and watch the site&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:serve&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;jekyll serve --watch&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Create a new post&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:post&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;STDIN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chomp&lt;/span&gt;
-  
-  &lt;span class=&quot;n&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/^ +/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;sh&quot;&gt;    ---&lt;/span&gt;
-&lt;span class=&quot;sh&quot;&gt;    layout: post&lt;/span&gt;
-&lt;span class=&quot;sh&quot;&gt;    date: #{date.strftime(&amp;#39;%Y-%m-%d %H:%M:%S&amp;#39;)}&lt;/span&gt;
-&lt;span class=&quot;sh&quot;&gt;    title: #{title}&lt;/span&gt;
-&lt;span class=&quot;sh&quot;&gt;    ---&lt;/span&gt;
-&lt;span class=&quot;sh&quot;&gt;    &lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;  EOS&lt;/span&gt;
-  
-  &lt;span class=&quot;n&quot;&gt;datef&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%Y-%m-%d&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;titlef&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;downcase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;_posts/&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datef&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;titlef&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.md&amp;quot;&lt;/span&gt;
-  
-  &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;Use rdiscount or redcarpet&lt;/h2&gt;
-
-&lt;p&gt;The default markdown parser &lt;code&gt;maruku&lt;/code&gt; works fine most of the time but I&amp;#39;ve run into a few problems like getting an &lt;code&gt;REXML could not parse this XML/HTML&lt;/code&gt; error when I try to highlight Objective-C code. Switch to &lt;code&gt;rdiscount&lt;/code&gt; or &lt;code&gt;redcarpet&lt;/code&gt; and the error goes away. Just add &lt;code&gt;markdown: redcarpet&lt;/code&gt; to your cofiguration file.&lt;/p&gt;
-
-&lt;h2&gt;Pretty Permalinks&lt;/h2&gt;
-
-&lt;p&gt;Add &lt;code&gt;permalink: pretty&lt;/code&gt; to your configuration file if you want posts to be served from &lt;code&gt;/2013/05/24/hello-jekyll/&lt;/code&gt; instead of &lt;code&gt;/2013/05/24/hello-jekyll.html&lt;/code&gt;. This also affects pages, so &lt;code&gt;about.html&lt;/code&gt; will be available at &lt;code&gt;/about/&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2&gt;Using Pow&lt;/h2&gt;
-
-&lt;p&gt;If you want to use the &lt;code&gt;rack&lt;/code&gt; server &lt;a href=&quot;http://pow.cx&quot;&gt;pow&lt;/a&gt;, build your site into &lt;code&gt;public&lt;/code&gt; instead of &lt;code&gt;_site&lt;/code&gt;, because &lt;code&gt;pow&lt;/code&gt; automatically serves everything in &lt;code&gt;public&lt;/code&gt; as static assets.&lt;/p&gt;
-
-&lt;h2&gt;An RSS Feed&lt;/h2&gt;
-
-&lt;p&gt;You&amp;#39;ll probably want to have an RSS feed for your site, I&amp;#39;ve described how I built one &lt;a href=&quot;/2013/05/23/adding-an-rss-feed-to-a-jekyll-site/&quot;&gt;in a seperate post&lt;/a&gt;.&lt;/p&gt;
+        <title>Happy 4th, everyone!</title>
+        <link>http://blog.rushir.co/2013/07/04/4th+of+July/</link>
+        <guid isPermaLink="true">http://blog.rushir.co/2013/07/04/4th+of+July/</guid>
+        <pubDate>Thu, 04 Jul 2013 21:28:00 +0200</pubDate>
+        <description>&lt;p&gt;&amp;quot;I learned something this 4th of July — no matter how many bottle rockets you tape to your feet, you can’t fly.&amp;quot; - Stephen Colbert
+Happy 4th of July!&lt;/p&gt;
 </description>
       </item>
     

@@ -1,17 +1,48 @@
----
-layout: default
-title: Rushir
----
+<!DOCTYPE html>
+<html>
 
-<ul style="list-style-type:none;padding:0px;">
-  {{ post.content }}
-  {% for post in site.posts limit:1 %}
-    <li>{{ post.date | date_to_string }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    <p></p>{{ post.content }}
-  {% endfor %}
-  {% for post in site.posts offset:1 limit:4 %}
-    <hr />
-    <li>{{ post.date | date_to_string }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    <p>{{ post.excerpt }}</p>
-  {% endfor %}
-</ul>
+<head>
+
+  <meta charset="utf-8">
+  <title>blog</title>
+  <meta name="author" content="Rushir">
+  <meta name="description" content="Blog">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+  <link rel='stylesheet' href='assets/css/style.css'>
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900' rel='stylesheet' type='text/css'>
+
+  <link href="assets/favicon.ico" rel="shortcut icon">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+  
+</head>
+
+<body>
+
+  <header>
+    <hgroup>
+      <h1>blg</h1>
+      <p>A Minimal Blog of a High Schooler's Thoughts On Life</p>
+    </hgroup>
+  </header>
+
+  <content>
+
+
+  <footer>
+    <h2 class="mt2">
+      1/04/14
+    </h2>
+    <p>
+      *Written whilst listenting to <a href="http://www.youtube.com/watch?v=MGKEexrjwyU">"X & Y" by Coldplay</a>*
+    </p>
+    <p>
+      The city life. Fast paced, movement, momentum. These things all encourage people to work hard, get things done. 
+    </p>
+  </footer>
+
+</body>
+
+</html>
